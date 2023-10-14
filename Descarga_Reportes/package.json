@@ -1,0 +1,19 @@
+{
+  "name": "descarga_reportes",
+  "version": "1.0.0",
+  "description": "Utilidad para descargar los reportes de despacho diario de la pagina del Administrador de Mercado Mayorista para un rango de fechas dada",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Stevengez/PruebaTecnica-EPM.git"
+  },
+  "author": "Steven Jocol",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Stevengez/PruebaTecnica-EPM/issues"
+  },
+  "homepage": "https://github.com/Stevengez/PruebaTecnica-EPM#readme"
+}

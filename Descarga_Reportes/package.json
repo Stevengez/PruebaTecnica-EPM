@@ -15,5 +15,11 @@
   "bugs": {
     "url": "https://github.com/Stevengez/PruebaTecnica-EPM/issues"
   },
-  "homepage": "https://github.com/Stevengez/PruebaTecnica-EPM#readme"
+  "homepage": "https://github.com/Stevengez/PruebaTecnica-EPM#readme",
+  "dependencies": {
+    "axios": "^1.5.1",
+    "date-diff": "^1.0.2",
+    "fs": "^0.0.1-security",
+    "path": "^0.12.7"
+  }
 }

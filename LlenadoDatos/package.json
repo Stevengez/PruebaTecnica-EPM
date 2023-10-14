@@ -1,0 +1,19 @@
+{
+  "name": "llenadodatos",
+  "version": "1.0.0",
+  "description": "Script para llenar datos en una base de datos desde archivos de reporte excel (xlsx)",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Stevengez/PruebaTecnica-EPM.git"
+  },
+  "author": "Steven Jocol",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Stevengez/PruebaTecnica-EPM/issues"
+  },
+  "homepage": "https://github.com/Stevengez/PruebaTecnica-EPM#readme"
+}

@@ -129,3 +129,4 @@ dist
 # Download Test Data
 Descarga_Reportes/Reporte*/
 Descarga_Reportes/node_modules/
+LlenadoDatos/node_modules/

@@ -7,7 +7,7 @@ const app = express();
 app.use(cors({ origin: '*'}));
 app.use('/', routes);
 
-const api_port = 8080;
+const api_port = process.env.API_PORT || 8080;
 app.listen(api_port, () => {
     console.log("API running on: ", api_port);
 });

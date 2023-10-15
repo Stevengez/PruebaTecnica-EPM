@@ -15,5 +15,12 @@
   "bugs": {
     "url": "https://github.com/Stevengez/PruebaTecnica-EPM/issues"
   },
-  "homepage": "https://github.com/Stevengez/PruebaTecnica-EPM#readme"
+  "homepage": "https://github.com/Stevengez/PruebaTecnica-EPM#readme",
+  "dependencies": {
+    "dotenv": "^16.3.1",
+    "fs": "^0.0.1-security",
+    "path": "^0.12.7",
+    "pg-promise": "^11.5.4",
+    "xlsx": "^0.18.5"
+  }
 }

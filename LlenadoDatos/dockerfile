@@ -1,0 +1,10 @@
+FROM postgres
+
+ENV POSTGRES_DB PruebaDB
+ENV POSTGRES_USER Prueba
+ENV POSTGRES_PASSWORD Prueba123
+
+EXPOSE 5432
+
+COPY ./DBdata/ /var/lib/postgresql/data
+COPY ./SQLscript/* /docker-entrypoint-initdb.d/

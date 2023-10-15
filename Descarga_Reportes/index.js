@@ -54,7 +54,7 @@ const downloadDailyReport = async (targetYearNumeric, targetMonthNumeric, target
     const dynamicURL = `${targetYearNumeric}/01_PROGRAMAS_DE_DESPACHO_DIARIO/${targetMonthNumeric}_${MonthLiterals[parseInt(targetMonthNumeric)-1]}/WEB${targetDayNumeric}${targetMonthNumeric}${targetYearNumeric}.xlsx`;
     // URL Completa en base a la fecha elegida
     const targetURL = `${baseURL}${dynamicURL}`;
-    const fileName = `WEB${targetDayNumeric}${targetMonthNumeric}${targetYearNumeric}.xlsx`;
+    const fileName = `${targetDayNumeric}-${targetMonthNumeric}-${targetYearNumeric}.xlsx`;
     await getFileFromURL(targetURL,targetDir, fileName);
 }
 
@@ -70,9 +70,15 @@ const getReports = async () => {
     const endYear = toDate.getFullYear();
 
     // Preparar directorio
-    const fullPathDir = createDaylyReportsDirectory(`${startDay}-${ShortMonthLiterals[startMonth-1]}-${startYear}`,`${endDay}-${ShortMonthLiterals[endMonth-1]}-${endYear}`);
+    const fullPathDir = createDaylyReportsDirectory(
+        `${startDay}-${ShortMonthLiterals[startMonth-1]}-${startYear}`,
+        `${endDay}-${ShortMonthLiterals[endMonth-1]}-${endYear}`
+    );
 
-    
+    const localizedStartDate = fromDate.toLocaleDateString('es-GT',{day:'numeric',month:'long',year:'numeric'});
+    const localizedEndDate = toDate.toLocaleDateString('es-GT',{day:'numeric',month:'long',year:'numeric'});
+    console.log(`\n Descargando archivos del ${localizedStartDate} al ${localizedEndDate}...`);
+
     // Ciclo para recorrer los meses y años
     for(let y = startYear; y <= endYear; y++){
         const targetYearNumeric = y;
@@ -90,6 +96,7 @@ const getReports = async () => {
             }
         }
     }
+    console.log("Tarea completa");
 }
 
 getReports();

@@ -130,3 +130,7 @@ dist
 Descarga_Reportes/Reporte*/
 Descarga_Reportes/node_modules/
 LlenadoDatos/node_modules/
+LlenadoDatos/.env
+PaginaWeb/node_modules
+PaginaWeb/dist
+PaginaWeb/build

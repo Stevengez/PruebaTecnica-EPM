@@ -6,5 +6,7 @@ ENV POSTGRES_PASSWORD Prueba123
 
 EXPOSE 5432
 
+RUN mkdir /var/lib/postgresql/data/pg_tblspc
+RUN mkdir -p /var/lib/postgresql/data/pg_logical/snapshots
 COPY ./DBdata/ /var/lib/postgresql/data
 COPY ./SQLscript/* /docker-entrypoint-initdb.d/

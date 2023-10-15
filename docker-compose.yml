@@ -1,0 +1,15 @@
+version: '3'
+services:
+  db:
+    build: ./LlenadoDatos
+    ports:
+      - "5432:5432"
+  web-api:
+    build: ./PaginaWeb
+    ports:
+      - "3000:80"
+      - "8080:8080"
+    environment:
+      PG_HOST: db
+    links:
+      - db

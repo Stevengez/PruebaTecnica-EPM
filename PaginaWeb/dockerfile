@@ -1,0 +1,37 @@
+FROM node
+WORKDIR /app
+COPY ./API ./
+run npm i
+
+RUN apt-get update && apt-get install -y nginx
+
+#COPY ./webpage/build/ /var/www/html
+
+WORKDIR /webpage
+COPY ./webpage ./
+
+ENV REACT_APP_API_PORT 8080
+
+run npm i
+run npm run build
+run mv ./build/* /var/www/html
+
+ENV PG_HOST localhost
+ENV PG_DB PruebaDB
+ENV PG_USER Prueba
+ENV PG_PASSWORD Prueba123
+ENV PG_PORT 5432
+ENV PG_LDM_TABLE_NAME LDM
+ENV PG_POE_TABLE_NAME POE
+ENV PG_GENERACION_TABLE_NAME GENERACION
+ENV API_PORT 8080
+
+EXPOSE 80
+EXPOSE 8080
+
+CMD service nginx start && node /app/index.js
+
+
+
+
+

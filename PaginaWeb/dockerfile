@@ -1,21 +1,23 @@
 FROM node
+# Copiar Archivos de la API
 WORKDIR /app
 COPY ./API ./
 run npm i
 
 RUN apt-get update && apt-get install -y nginx
 
-#COPY ./webpage/build/ /var/www/html
-
+# Copiar Archivos de la app de react parar generar el build
 WORKDIR /webpage
 COPY ./webpage ./
 
+# Variable de entorno para decirle a la pagina web que puerto usar para llamar a la API
 ENV REACT_APP_API_PORT 8080
 
 run npm i
 run npm run build
 run mv ./build/* /var/www/html
 
+# Variables de entorno para la conexion a DB de la API
 ENV PG_HOST localhost
 ENV PG_DB PruebaDB
 ENV PG_USER Prueba
@@ -26,6 +28,7 @@ ENV PG_POE_TABLE_NAME POE
 ENV PG_GENERACION_TABLE_NAME GENERACION
 ENV API_PORT 8080
 
+# Exponer Nginx en puerto 80 y la API en 8080
 EXPOSE 80
 EXPOSE 8080
 

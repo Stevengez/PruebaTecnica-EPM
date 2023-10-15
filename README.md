@@ -1,7 +1,7 @@
 # PruebaTecnica-EPM
 Este repositorio contiene la solucion de la prueba tecnica para la plaza de programador de transformacion digital
 
-# Como probar la solucion
+# Instrucciones
 Para probar la solucion, de manera facil he incluido un archivo docker-compose.yml que permite crear y levantar las imanges en docker asi como crear la conexion entre el contenedor de la base de datos y la pagina web y su API:
 ```bash
 # Ejecutar desde la raiz de la carpeta del repositorio

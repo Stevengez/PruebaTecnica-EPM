@@ -1,6 +1,7 @@
 
 # Base de Datos
 Se creo una base de datos usando PostgreSQL, los datos de la misma ya se incluyen en el repositorio (DBdata) para poder crear una imagen de docker.
+Las credenciales por defecto se encuentran implementadas en todos los componentes que las usan pero se pueden modificar usando variables de entorno (ver archivo .env.tmp)
 
 Para crear la imagen basta utilizar el siguiente comando desde la raiz de la carpeta **LlenadoDatos**
 ```bash
